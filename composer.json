@@ -1,0 +1,29 @@
+{
+  "name": "silverstripe/webpack-dev-server",
+  "description": "Provides a service for including dependencies gererated by webpack dev server",
+  "type": "silverstripe-module",
+  "require": {
+    "silverstripe/admin": "^4"
+  },
+  "require-dev": {
+    "phpunit/PHPUnit": "^5.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "SilverStripe\\WebpackDevServer\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SilverStripe\\WebpackDevServer\\Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "process-timeout": 600
+  },
+  "scripts": {
+    "lint": "phpcs src/ tests/"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
