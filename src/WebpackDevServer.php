@@ -33,9 +33,9 @@ class WebpackDevServer
     {
         if ($this->isActive()) {
             Requirements::javascript($this->toDevServerPath($path));
+        } else {
+            Requirements::css($this->toPublicPath($path));
         }
-
-        Requirements::css($this->toPublicPath($path));
     }
 
     /**
